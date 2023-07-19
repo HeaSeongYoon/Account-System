@@ -19,6 +19,11 @@ public class CreateAccount {
         @Min(100)
         private Long initialBalance;
 
+        public Request(Long userId, Long initialBalance) {
+            this.userId = userId;
+            this.initialBalance = initialBalance;
+        }
+
     }
 
     @Getter
@@ -28,8 +33,16 @@ public class CreateAccount {
     @Builder
     public static class Response{
         private Long userId;
-        private Long accountNumber;
+        private String accountNumber;
         private LocalDateTime registeredAt;
+
+        public static Response from(AccountDto accountDto) {
+            return Response.builder()
+                    .userId(accountDto.getUserId())
+                    .accountNumber(accountDto.getAccountNumber())
+                    .registeredAt(accountDto.getRegisteredAt())
+                    .build();
+        }
 
     }
 }
