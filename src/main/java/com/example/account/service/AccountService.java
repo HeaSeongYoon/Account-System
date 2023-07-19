@@ -15,7 +15,6 @@ public class AccountService {
 
     @Transactional
     public void createAccount(Long userId, Long initialBalance) {
-
     }
 
     @Transactional
