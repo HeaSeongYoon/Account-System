@@ -259,7 +259,7 @@ class AccountServiceTest {
                 .willReturn(Optional.of(Account.builder()
                         .accountUser(pobi)
                         .accountStatus(AccountStatus.UNREGISTERED)
-                        .balance(100L)
+                        .balance(0L)
                         .accountNumber("10000000012").build()));
 
         //when
