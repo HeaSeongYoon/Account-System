@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class TransactionDto {
-    private Long accountNumber;
+    private String accountNumber;
     private TransactionType transactionType;
     private TransactionResultType transactionResultType;
     private Long amount;

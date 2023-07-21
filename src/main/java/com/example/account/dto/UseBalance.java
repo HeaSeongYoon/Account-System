@@ -34,6 +34,11 @@ public class UseBalance {
         @Max(1000_000_000)
         private Long amount;
 
+        public Request(Long userId, String accountNumber, Long amount) {
+            this.userId = userId;
+            this.accountNumber = accountNumber;
+            this.amount = amount;
+        }
 
     }
 
@@ -43,7 +48,7 @@ public class UseBalance {
     @AllArgsConstructor
     @Builder
     public static class Response{
-        private Long accountNumber;
+        private String accountNumber;
         private TransactionResultType transactionResult;
         private String transactionId;
         private Long amount;
