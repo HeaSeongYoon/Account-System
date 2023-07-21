@@ -3,6 +3,16 @@ POST http://localhost:8080/account-system
 Content-Type: application/json
 
 {
-    "id": 1,
-    "initialBalance": 10000
+    "id": 2,
+    "initialBalance": 0
+}
+
+
+### delete account
+DELETE http://localhost:8080/account-system
+Content-Type: application/json
+
+{
+    "id": 2,
+    "accountNumber": "1000000002"
 }

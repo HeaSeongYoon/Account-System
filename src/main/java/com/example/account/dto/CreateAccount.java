@@ -16,7 +16,7 @@ public class CreateAccount {
 
 
         @NotNull
-        @Min(100)
+        @Min(0)
         private Long initialBalance;
 
         public Request(Long userId, Long initialBalance) {
