@@ -1,9 +1,21 @@
 ### use balance
-POST http://localhost:8080/account
+POST http://localhost:8080/transaction
 Content-Type: application/json
 
 {
     "userId": 1,
     "accountNumber": "1000000000",
     "amount": 12345
+}
+
+
+
+### cancel balance
+POST http://localhost:8080/transaction/cancel
+Content-Type: application/json
+
+{
+    "transactionId": "6545sd64sa651sd16as1dd5as5d31as321d",
+    "accountNumber": "1000000002",
+    "amount": 10000
 }

@@ -34,6 +34,8 @@ public class CancelBalance {
         private Long amount;
 
 
+        public Request(String transactionId, String accountNumber, long amount) {
+        }
     }
 
     @Getter
