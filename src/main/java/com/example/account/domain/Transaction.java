@@ -17,10 +17,7 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Transaction {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class Transaction extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     private TransactionType transactionType;
@@ -36,8 +33,5 @@ public class Transaction {
     private LocalDateTime transactedAt;
 
 
-    @CreatedDate
-    private LocalDateTime cratedAt;
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
+
 }
